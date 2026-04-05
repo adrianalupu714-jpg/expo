@@ -53,8 +53,8 @@ internal struct PickerView: ExpoSwiftUI.View {
       }
       props.onSelectionChange(payload)
     }
-    .onChange(of: props.selection) { newValue in
-      selection = Self.getHashableFromEither(newValue)
+    .onChange(of: Self.getHashableFromEither(props.selection)) { newValue in
+      selection = newValue
     }
     .onAppear {
       selection = Self.getHashableFromEither(props.selection)

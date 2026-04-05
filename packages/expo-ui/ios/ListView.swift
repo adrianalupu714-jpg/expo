@@ -19,8 +19,8 @@ struct ListView: ExpoSwiftUI.View {
     .onAppear {
       selection = Self.getHashableSetFromEither(props.selection)
     }
-    .onChange(of: props.selection) { newValue in
-      selection = Self.getHashableSetFromEither(newValue)
+    .onChange(of: Self.getHashableSetFromEither(props.selection)) { newValue in
+      selection = newValue
     }
     .onChange(of: selection) { newSelection in
       handleSelectionChange(selection: newSelection)

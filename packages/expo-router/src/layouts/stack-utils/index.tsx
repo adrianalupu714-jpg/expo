@@ -12,6 +12,7 @@ export {
   appendScreenStackPropsToOptions,
   validateStackPresentation,
   type StackScreenProps,
+  type ExtendedStackNavigationOptions,
 } from './StackScreen';
 
 export { mapProtectedScreen } from './mapProtectedScreen';
